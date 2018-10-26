@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 //        list.setAdapter(adapter);
         notify_spinner = findViewById(R.id.notify_spinner);
         notify = getResources().getStringArray(R.array.notify);
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, notify);
+        //final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, notify);
+        final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.notify,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         notify_spinner.setAdapter(adapter);
         notify_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
